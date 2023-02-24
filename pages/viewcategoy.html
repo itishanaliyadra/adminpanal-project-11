@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Form Validation</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../documentation/css/all.min.css">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="../index.html">Concept</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span
+                                    class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img
+                                                            src="../assets/images/avatar-2.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">Jeremy
+                                                            Rakestraw</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img
+                                                            src="../assets/images/avatar-3.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">
+                                                            John Abraham</span>is now following you
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img
+                                                            src="../assets/images/avatar-4.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">Monaan Pechi</span> is
+                                                        watching your main repository
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img
+                                                            src="../assets/images/avatar-5.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">Jessica
+                                                            Caruso</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown connection">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
+                            <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
+                                <li class="connection-list">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="../assets/images/github.png"
+                                                    alt=""> <span>Github</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="../assets/images/dribbble.png"
+                                                    alt=""> <span>Dribbble</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="../assets/images/dropbox.png"
+                                                    alt=""> <span>Dropbox</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img
+                                                    src="../assets/images/bitbucket.png" alt="">
+                                                <span>Bitbucket</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img
+                                                    src="../assets/images/mail_chimp.png" alt=""><span>Mail
+                                                    chimp</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="../assets/images/slack.png"
+                                                    alt=""> <span>Slack</span></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="conntection-footer"><a href="#">More</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                    src="../assets/images/avatar-1.jpg" alt="" id="userImg"
+                                    class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
+                                aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name" id="username"></h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="../accoutn.html"><i
+                                        class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-1" aria-controls="submenu-1"><i
+                                        class="fa fa-fw fa-user-circle"></i>Dashboard <span
+                                        class="badge badge-success">6</span></a>
+                                <div id="submenu-1" class="collapse submenu">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../dashboard-sales.html">Dashboard</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-4" aria-controls="submenu-4"><i
+                                        class="fab fa-fw fa-wpforms"></i>Category</a>
+                                <div id="submenu-4" class="collapse submenu">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="./addcategory.html">Add Category</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="./viewcategoy.html">View Category
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="./viweitems.html">Actvie Category
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="container-fluid  dashboard-content">
+                <!-- ============================================================== -->
+                <!-- pageheader -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-header">
+                            <h2 class="pageheader-title">Category Tables </h2>
+                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce
+                                sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                            <div class="page-breadcrumb">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a>
+                                        </li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Tables</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                        <li class="breadcrumb-item active" aria-current="page">General Tables</li>
+                                        Tables</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- end pageheader -->
+                <!-- ============================================================== -->
+
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- basic table -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-12 ">
+                        <div class="card">
+                            <h5 class="card-header">Category Table</h5>
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Id</th>
+                                            <th scope="col">Category Name</th>
+                                            <th scope="col">User Name </th>
+                                            <th scope="col ">Active</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="user">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 ">
+                        <div class="card">
+                            <h5 class="card-header">Sub Category Table</h5>
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Id</th>
+                                            <th scope="col">Category Name</th>
+                                            <th scope="col ">Sub Category Name</th>
+                                            <th scope="col ">User Name</th>
+                                            <th scope="col">Active</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="usaerdata">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- end main wrapper -->
+            <!-- ============================================================== -->
+            <!-- Optional JavaScript -->
+            <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+            <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+            <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+            <script src="../assets/vendor/parsley/parsley.js"></script>
+            <script src="../assets/libs/js/main-js.js"></script>
+            <script>
+                $('#form').parsley();
+            </script>
+            <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function () {
+                    'use strict';
+                    window.addEventListener('load', function () {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+                    }, false);
+                })();
+            </script>
+            <script type="text/javascript">
+                let user = JSON.parse(localStorage.getItem('checkuser'));
+                if (!user) {
+                    window.location.href = "./pages/login.html";
+                }
+
+                // ----------------------category-------------------------//
+                let val = JSON.parse(localStorage.getItem('categorydata'));
+
+                view();
+                function view() {
+                    let tbl = "";
+                    for (let i in val) {
+                        console.log(val[i].username);
+                        tbl += `
+                        <div class="container">
+                            <div class="row">
+                                 <div class="col-8">
+                                    <tr>
+                                        <td>${Number(i) + 1}</td>
+                                        <td>
+                                            <div class="row">
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6  pb-3">
+                                                        <input type="text" readonly class="form-control-plaintext" id="category${val[i].id}"
+                                                            value="${val[i].category}">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>${user.name}</td>
+                                            `
+                        if (val[i].status == "active") {
+                            tbl += `
+                            <td>
+                                 <button onclick="active(${val[i].id})" class="btn btn-success" >Active</button>
+                             </td>
+                             `
+                        } else {
+                            tbl += `
+                            <td>
+                                                <button onclick="unactive(${val[i].id})" class="btn btn-warning" >Dactive</button>
+                                                </td> 
+                                    `
+                        }
+                        tbl += `
+                                            
+                                            <td style="display: flex; justify-content: strat; padding: 4px;" >
+                                                    <i class="fa fa-trash btn btn-danger p-3 m-1" id="btnde${val[i].id}" style="display: block;" aria-hidden="true" onclick="deletd(${val[i].id})"></i>
+                                                    <i class="fas fa-edit btn btn-success p-3 m-1" id="dtnup${val[i].id}" style="display: block;" onclick="update(${val[i].id})"></i></i>
+                                                    <i class="fa-solid fa-circle-check  p-3 m-1 h4" style="display: none;" id="dbtn${val[i].id}"></i>
+                                                    <i class="fa-solid fa-xmark  p-3 m-1 h4" style="display: none;" id="cbtn${val[i].id}" onclick = "dataclear()"></i>
+                                                </div> 
+                                        </td>
+                                    </tr>
+                                 </div>
+                      </div>
+                </div>
+                        `
+                    }
+                    document.getElementById('user').innerHTML = tbl;
+                }
+                function deletd(id) {
+                    for (let i in val) {
+                        if (val[i].id == id) {
+                            val.splice(i, 1)
+                        }
+                    }
+                    localStorage.setItem('categorydata', JSON.stringify(val));
+                    view();
+                }
+                function update(id) {
+                    let showname = document.getElementById(`category${id}`);
+                    for (let i in val) {
+                        if (val[i].id == id) {
+                            // alert(id)
+                            showname.removeAttribute('readonly');
+                            document.getElementById(`dbtn${id}`).style.display = "block";
+                            document.getElementById(`btnde${id}`).style.display = "none";
+                            document.getElementById(`dtnup${id}`).style.display = "none";
+                            document.getElementById(`cbtn${id}`).style.display = "block";
+                            document.getElementById(`dbtn${id}`).setAttribute('onclick', `dataupdated(${id})`);
+                        }
+                    }
+
+                }
+                function dataupdated(id) {
+                    let category = document.getElementById(`category${id}`).value;
+                    let categoryuppercase = category.toUpperCase();
+                    for (let i in val) {
+                        if (val[i].id == id) {
+                            val[i].category = categoryuppercase;
+                        }
+                        localStorage.setItem('categorydata', JSON.stringify(val));
+
+                    };
+                    view();
+                }
+
+                function dataclear() {
+                    localStorage.setItem('categorydata', JSON.stringify(val));
+                    view();
+                }
+                function active(id) {
+                    let v = "unactive";
+                    for (let i in val) {
+                        if (val[i].id == id) {
+                            val[i].status = v;
+                        }
+                        localStorage.setItem('categorydata', JSON.stringify(val));
+                    }
+                    view();
+                    viewdata()
+                }
+                function unactive(id) {
+                    let v = "active";
+                    for (let i in val) {
+                        if (val[i].id == id) {
+                            val[i].status = v;
+                        }
+                        localStorage.setItem('categorydata', JSON.stringify(val));
+                    }
+                    view();
+                    viewdata()
+                }
+                // ------------------------Sub category ---------------------------//
+                let data = JSON.parse(localStorage.getItem('product'));
+                viewdata();
+                function viewdata() {
+                    let tbl = "";
+                    if (data.length != 0) {
+                        for (let i in data) {
+                            let checkFlag = false
+                            for (let ob in val) {
+                                if (val[ob].status == "active" && val[ob].category == data[i].category) {
+                                    checkFlag = true;
+                                }
+                            }
+                            tbl += `
+                        <div class="container">
+                            <div class="row">
+                                 <div class="col-8">
+                                    <tr>
+                                        <td>${Number(i) + 1}</td>
+                                        <td><input type="text" id="subcategory" readonly class="p-2 form-control-plaintext">${data[i].category}</td>
+                                        <td>
+                                            <input type="text" readonly class="form-control-plaintext" id="scategory${data[i].id}" value="${data[i].subcategorydata}"></td>
+                                            <td>${user.name}</td>
+                        `
+                            if (data[i].substatus == "active" && checkFlag) {
+                                tbl += `
+                            <td>
+                                 <button onclick="activesub(${data[i].id})" class="btn btn-success" >Active</button>
+                             </td>
+                             `
+                            } else {
+                                tbl += `
+                            <td>
+                                                <button onclick="subunactive(${data[i].id})" class="btn btn-warning" >Dactive</button>
+                                                </td> 
+                                    `
+                            }
+                            tbl += `
+                                            
+                                            <td style="display: flex; justify-content: strat; padding: 4px;" >
+                                                    <i class="fa fa-trash btn btn-danger p-3 m-1" id="btnde${data[i].id}" style="display: block;" aria-hidden="true" onclick="subdeletd(${data[i].id})"></i>
+                                                    <i class="fas fa-edit btn btn-success p-3 m-1" id="dtnup${data[i].id}" style="display: block;" onclick="subupdate(${data[i].id})"></i></i>
+                                                    <i class="fa-solid fa-circle-check  p-3 m-1 h4" style="display: none;" id="dbtn${data[i].id}"></i>
+                                                    <i class="fa-solid fa-xmark  p-3 m-1 h4" style="display: none;" id="cbtn${data[i].id}" onclick = "subdataclear()"></i>
+                                                </div> 
+                                        </td>
+                                    </tr>
+                                    `
+
+                        }
+                    }
+                    else {
+                        tbl = ""
+                    }
+                    document.getElementById('usaerdata').innerHTML = tbl;
+
+                }
+                function subdeletd(id) {
+                    for (let i in data) {
+                        if (data[i].id == id) {
+                            data.splice(i, 1)
+
+                        }
+                    }
+                    localStorage.setItem('product', JSON.stringify(data));
+                    viewdata();
+                }
+                function subupdate(id) {
+                    let subcategory = document.getElementById(`scategory${id}`);
+                    for (let i in data) {
+                        if (data[i].id == id) {
+                            // alert(id)
+                            subcategory.removeAttribute('readonly');
+                            document.getElementById(`dbtn${id}`).style.display = "block";
+                            document.getElementById(`btnde${id}`).style.display = "none";
+                            document.getElementById(`dtnup${id}`).style.display = "none";
+                            document.getElementById(`cbtn${id}`).style.display = "block";
+                            document.getElementById(`dbtn${id}`).setAttribute('onclick', `subdataupdated(${id})`);
+                        }
+                    }
+                }
+                function subdataupdated(id) {
+                    let subcategory = document.getElementById(`scategory${id}`).value;
+                    let categoryuppercase = subcategory.toUpperCase();
+                    for (let i in data) {
+                        if (data[i].id == id) {
+                            data[i].subcategorydata = categoryuppercase;
+                        }
+                        localStorage.setItem('categorydata', JSON.stringify(data));
+
+                    };
+                    viewdata();
+                }
+                function subdataclear() {
+                    localStorage.setItem('product', JSON.stringify(data));
+                    viewdata();
+                }
+                function activesub(id) {
+                    let s = "unactive";
+                    for (let i in data) {
+                        if (data[i].id == id) {
+                            data[i].substatus = s;
+                        }
+                        localStorage.setItem('product', JSON.stringify(data));
+                    }
+                    viewdata();
+                }
+                function subunactive(id) {
+                    let s = "active";
+                    for (let i in data) {
+                        if (data[i].id == id) {
+                            data[i].substatus = s;
+                        }
+                        localStorage.setItem('product', JSON.stringify(data));
+                    }
+                    viewdata();
+                }
+            </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>forget</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- login page  -->
+    <!-- ============================================================== -->
+    <div class="splash-container">
+        <div class="card ">
+            <div class="card-header text-center">Enter your OTP number !</div>
+            <div id="arre"></div>
+            <div class="card-body">
+                <div id="arre"></div>
+                <form>
+                        <input class="form-control form-control-lg mb-3" id="otp" type="number" placeholder="Enter uoyr OTP !">
+                    <div class="w-50">
+                        <button type="button" class="btn btn-primary mb-2 btn-block"
+                            onclick="otpbtn()">Recover</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- end login page  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript">
+        let userotp=JSON.parse(localStorage.getItem('userotp'));
+        if(!userotp){
+            window.location.href="forgetpassword.html";
+        }
+        function otpbtn() {
+           let otp= document.getElementById('otp').value;
+           let val = JSON.parse(localStorage.getItem('userotp'));
+           if(val.otp == otp){
+            window.location.href="newpassword.html";
+           }
+           else{
+            let msg = `
+                    <div class="alert alert-danger" role="alert">
+                        Enter your OTP !
+                    </div>
+                    `
+                document.getElementById('arre').innerHTML = msg;
+           }
+
+        }
+    </script>
+</body>
+
+</html>

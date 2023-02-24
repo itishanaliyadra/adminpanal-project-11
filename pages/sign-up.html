@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+<!-- ============================================================== -->
+<!-- signup form  -->
+<!-- ============================================================== -->
+
+<body>
+    <!-- ============================================================== -->
+    <!-- signup form  -->
+    <!-- ============================================================== -->
+    <form class="splash-container">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-1">Registrations Form</h3>
+                <p>Please enter your user information.</p>
+            </div>
+            <div id="arre"></div>
+            <div class="card-body">
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="text" name="nick" required=""
+                        placeholder="Username" autocomplete="off" id="name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="email" name="email" required=""
+                        placeholder="E-mail" auxtocomplete="off" id="email">
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" id="password" type="password" required=""
+                        placeholder="Password" itemid="password">
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="password" placeholder="Confirm" id="cpassword">
+                </div>
+                <div class="form-group pt-2">
+                    <button class="btn btn-block btn-primary" type="button" onclick="registrations()">Register My
+                        Account</button>
+                </div>
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">By
+                            creating an account, you agree the <a href="#">terms and conditions</a></span>
+                    </label>
+                </div>
+            </div>
+            <div class="card-footer bg-white">
+                <p>Already member? <a href="login.html" class="text-secondary">Login Here.</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+<script type="text/javascript">
+    let data;
+    if (localStorage.getItem('register') === null || localStorage.getItem('register') == undefined) {
+        data = [];
+    } else {
+        data = JSON.parse(localStorage.getItem('register'));
+    }
+    function mt() {
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('password').value = "";
+        document.getElementById('cpassword').value = "";
+    }
+    function registrations() {
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let cpassword = document.getElementById('cpassword').value;
+        if (name != "") {
+            if (email != "") {
+                if (password == cpassword) {
+                    let obj = {
+                        id: Math.floor(Math.random() * 10000),
+                        name: name,
+                        email: email,
+                        password: password,
+                        cpassword: cpassword,
+                        images:"./images/img1.png",
+                    }
+                    data.push(obj)
+                    let msg = `
+                    <div class="alert alert-secondary" role="alert">
+                        Record is successfully Add!
+                        </div>
+                        `
+                        document.getElementById('arre').innerHTML = msg;
+                        localStorage.setItem('register', JSON.stringify(data));
+                    mt();
+                }
+                else {
+                    let msg = `
+                        <div class="alert alert-danger" role="alert">
+                        Password is not Confirm Enter confirm password !
+                        </div>
+                        `
+                    document.getElementById('arre').innerHTML = msg;
+                }
+
+            }
+            else {
+                let msg = `
+                    <div class="alert alert-danger" role="alert">
+                   Enter your valid Email!
+                    </div>
+                    `
+                document.getElementById('arre').innerHTML = msg;
+            }
+        } else {
+            let msg = `
+        <div class="alert alert-danger" role="alert">
+        Enter your name!
+        </div>
+        `
+            document.getElementById('arre').innerHTML = msg;
+        }
+
+    }
+</script>
+
+</html>
